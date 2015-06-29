@@ -1,0 +1,2 @@
+load full_event_attendees.csv
+find first_name john
