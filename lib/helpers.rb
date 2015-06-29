@@ -99,10 +99,10 @@ end
 
 def valid_header(attribute)
 	if @loaded_data.headers.any? {|a| a == :"#{attribute}"}
-		puts "Attribute input is good, proceeding to pull data..."
+		# puts "Attribute input is good, proceeding to pull data..."
 		true
 	else
-		puts "The attribute you entered was invalid."
+		# puts "The attribute you entered was invalid."
 		false
 	end
 end
