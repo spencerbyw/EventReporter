@@ -1,3 +1,6 @@
+# Author: Spencer Bywater (@spencerbyw)
+# Project Definition: http://tutorials.jumpstartlab.com/projects/event_reporter.html
+
 require 'csv'
 require_relative 'cleaners'
 require_relative 'helpers'
@@ -182,7 +185,9 @@ class EventReporter
 			end
 			# Load in the datas.
 			@loaded_data.each do |row|
-				if row[:"#{attributes[0]}"].split.join(" ").casecmp(criteria_strings[0]).zero? and row[:"#{attributes[1]}"].split.join(" ").casecmp(criteria_strings[1]).zero?
+				case1 = row[:"#{attributes[0]}"].split.join(" ").casecmp(criteria_strings[0]).zero?
+				case2 = row[:"#{attributes[1]}"].split.join(" ").casecmp(criteria_strings[1]).zero?
+				if case1 and case2
 					@the_queue << row
 					count += 1	
 				end
